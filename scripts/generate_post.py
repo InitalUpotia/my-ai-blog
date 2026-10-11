@@ -10,13 +10,6 @@ client = OpenAI(
     base_url="https://api.deepseek.com"
 )
 
-# # 2. 读取选题池
-# with open("topics.json", "r", encoding="utf-8") as f:
-#     topics = json.load(f)
-
-# # 随机选一个选题
-# topic = random.choice(topics)
-
 # 日记的“素材池”
 fragments = [
     "今天去了图书馆。",
@@ -28,6 +21,16 @@ fragments = [
     "今天有一场live呢。",
     "今天翻到以前的照片。",
     "今天什么也没做。",
+    "今天鱼缸里的鱼死了。",
+    "今天日记里有一页不是我写的。",
+    "今天有人敲门，开门没人。",
+    "今天在镜子里看到自己，愣了一下。",
+    "今天鞋是湿的，但我没出门。",
+    "今天去了事务所。",
+    "今天拍了一场戏。",
+    "今天看了剧本。",
+    "今天回家很晚。",
+    "今天收到一封粉丝的信。"
 ]
 
 is_off = random.randint (0,1);
@@ -37,13 +40,11 @@ else:
     abnormal = "这是一篇完全正常的日记，不用加入任何异常细节"
 
 # 3. 构建提示词
-prompt = f"""请以日本偶像歌手未麻（人物源自电影《未麻的部屋》）的身份，以第一人称，写一篇日记。
+prompt = f"""请以日本流行音乐偶像团体"CHAM!"成员中的偶像歌手未麻（人物源自电影《未麻的部屋》）的身份，以第一人称，写一篇日记。
 
 
 要求：
 - 使用 Markdown 格式。
-- 包含 YAML Front Matter，字段包括：title, date, draft (设为 false), tags, description。
-- date 使用当前日期 {datetime.now().strftime('%Y-%m-%d')}。
 - 3 到 10 段，每段1-5句话。
 - 语气平静、简短、不展开，捎带一点可爱，稍微有一点意识流。
 - {abnormal}
@@ -51,10 +52,11 @@ prompt = f"""请以日本偶像歌手未麻（人物源自电影《未麻的部�
 - 标题语法正确，语句通顺，但又一丝丝怪异感。
 
 参考风格：
-今天去了图书馆。借了三本书。
-回来的时候发现其中一本我已经看过了，但我记得上次借的不是这本。
-算了，可能是记错了。
-晚上写了点代码。部署成功了。
+今天去了事务所。经纪人说我最近状态不错。
+回家路上买了鱼食。鱼缸里的鱼只剩一条了。
+我记得昨天还有三条。
+可能是记错了。
+晚上写了日记。今天就这样。
 
 你可以从下面的片段里选几个作为素材：
 {random.sample(fragments, 3)}
@@ -85,6 +87,7 @@ front_matter = f"""---
 title: "{date_str}"
 date: {datetime.now().isoformat()}
 draft: false
+author: '雾越未麻'
 categories: ["日记"]
 hideMeta: true
 ShowReadingTime: false

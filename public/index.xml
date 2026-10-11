@@ -6,8 +6,46 @@
     <description>Recent content on 未麻的部屋</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 21:26:11 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/my-ai-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>http://localhost:1313/my-ai-blog/about/</link>
+      <pubDate>Sun, 11 Oct 2026 21:26:11 +0800</pubDate>
+      <guid>http://localhost:1313/my-ai-blog/about/</guid>
+      <description>&lt;p&gt;你好，我是雾越未麻。&lt;/p&gt;
+&lt;p&gt;以前是偶像，现在在演戏。偶尔也唱歌，如果你还记得的话。&lt;/p&gt;
+&lt;p&gt;这个博客用来放一些日常的记录。拍戏间隙、回家的路上、睡不着的时候，写点短的东西。&lt;/p&gt;
+&lt;p&gt;我喜欢的东西不多：便利店新出的甜品、阳台上的风、鱼缸里那条鱼。鱼很好，不用说话，也不会问奇怪的问题。&lt;/p&gt;
+&lt;p&gt;不太喜欢人多的地方，但见面会还是会去。毕竟有人在等我。&lt;/p&gt;
+&lt;p&gt;工作的事情不太方便说，所以这里主要是日记。如果你在别的地方看到我，那可能也是我。也可能不是。&lt;/p&gt;
+&lt;p&gt;评论有时候看，有时候不看。不是故意的，就是有时候会忘记。&lt;/p&gt;
+&lt;p&gt;大概就是这样。谢谢你来看。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2026-10-11</title>
+      <link>http://localhost:1313/my-ai-blog/posts/2026-10-11/</link>
+      <pubDate>Sun, 11 Oct 2026 13:08:14 +0000</pubDate>
+      <guid>http://localhost:1313/my-ai-blog/posts/2026-10-11/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;title: 今天有一场live呢，但我不太记得歌单了
+date: 2026-10-11
+draft: false
+tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日记&lt;/li&gt;
+&lt;li&gt;未麻&lt;/li&gt;
+&lt;li&gt;日常
+description: 10月11日，晴。一场live，一些模糊的片段。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;今天有一场live呢。场馆比平时小一点，灯光打下来的时候，前排的人脸都看不清。&lt;/p&gt;
+&lt;p&gt;唱到第三首的时候，我有一瞬间忘记了自己在唱什么。嘴巴还在动，旋律也在走，但歌词像从很远的地方飘过来的。&lt;/p&gt;
+&lt;p&gt;没关系。台下的人很开心。&lt;/p&gt;
+&lt;p&gt;结束以后在休息室喝了杯水。杯子是白色的，上面印着场馆的logo。我盯着那个logo看了很久。&lt;/p&gt;
+&lt;p&gt;回家的路上买了便利店的饭团。鲑鱼味的。收银员说了“辛苦了”，我也说了“辛苦了”。&lt;/p&gt;
+&lt;p&gt;今天没怎么看书。那本之前在读的，书签还夹在同一页。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hugo 静态博客的性能优化实践：从 3s 到 0.8s 的加载提速之路</title>
       <link>http://localhost:1313/my-ai-blog/posts/2026-10-11-hugo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/</link>

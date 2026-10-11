@@ -13,6 +13,7 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   defaultTheme: auto
+  ShowAllPagesInArchive: true
 
 menu:
   main:
