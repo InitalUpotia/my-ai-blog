@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on 未麻的部屋</title>
+    <link>http://localhost:1313/my-ai-blog/posts/</link>
+    <description>Recent content in Posts on 未麻的部屋</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/my-ai-blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 静态博客的性能优化实践：从 3s 到 0.8s 的加载提速之路</title>
+      <link>http://localhost:1313/my-ai-blog/posts/2026-10-11-hugo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my-ai-blog/posts/2026-10-11-hugo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/</guid>
+      <description>通过图片处理、代码分割、CDN 缓存与资源预加载等手段，系统性地将 Hugo 博客首屏加载时间从 3 秒降至 0.8 秒，本文分享完整实践与可复用配置。</description>
+    </item>
+  </channel>
+</rss>

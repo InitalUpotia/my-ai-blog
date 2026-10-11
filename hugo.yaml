@@ -25,7 +25,7 @@ menu:
       weight: 2
     - identifier: tags
       name: 标签
-      url:/tags/
+      url: /tags/
       weight: 3
     - name: 关于
       url: /about/

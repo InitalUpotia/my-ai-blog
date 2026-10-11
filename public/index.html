@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>My New Hugo Project</title>
+<title>未麻的部屋</title>
 
 <meta name="description" content="">
 <meta name="author" content="">
@@ -72,7 +72,7 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/my-ai-blog/" accesskey="h" title="My New Hugo Project (Alt + H)">My New Hugo Project</a>
+            <a href="http://localhost:1313/my-ai-blog/" accesskey="h" title="未麻的部屋 (Alt + H)">未麻的部屋</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -103,6 +103,16 @@
                 </a>
             </li>
             <li>
+                <a href="http://localhost:1313/my-ai-blog/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/my-ai-blog/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/my-ai-blog/about/" title="关于">
                     <span>关于</span>
                 </a>
@@ -113,7 +123,7 @@
 <main class="main"> 
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>你好 👋</h1>
+        <h1>未麻的部屋</h1>
     </header>
     <div class="entry-content md-content">
         
@@ -126,10 +136,28 @@
 
     </footer>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Hugo 静态博客的性能优化实践：从 3s 到 0.8s 的加载提速之路
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言 Hugo 以“世界上最快的静态站点生成器”著称，但生成快 ≠ 访问快。很多 Hugo 博客在本地 hugo server 时秒开，部署到线上后却因为未压缩的图片、阻塞渲染的 JS、缺失的缓存策略而变得迟缓。本文记录我对一个中型 Hugo 博客（约 120 篇文章、300&#43; 图片）进行性能优化的完整过程，最终将 Lighthouse 性能分从 62 提升到 98，首屏加载时间从 3.1s 降至 0.8s。
+一、图片处理：从 4MB 到 400KB 图片通常是静态博客最大的性能瓶颈。我原先直接引用原始 PNG 截图，单张动辄 1.5MB。Hugo 内置的 Image Processing 配合 Page Resources 可以自动完成缩放、格式转换与压缩。
+1.1 使用 Page Bundle 管理图片 将文章改为 Page Bundle 结构：
+content/posts/my-post/├── index.md└── cover.png 1.2 在模板中生成 WebP 与响应式 srcset {{ $img := .Resources.GetMatch &#34;cover.png&#34; }} {{ $webp := $img.Resize &#34;800x webp q80&#34; }} {{ $small := $img.Resize &#34;400x webp q75&#34; }} {{ $large := $img.Resize &#34;1200x webp q80&#34; }} &lt;img src=&#34;{{ $webp.RelPermalink }}&#34; srcset=&#34;{{ $small.RelPermalink }} 400w, {{ $webp.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w&#34; sizes=&#34;(max-width: 600px) 400px, 800px&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34; width=&#34;{{ $webp.Width }}&#34; height=&#34;{{ $webp.Height }}&#34; alt=&#34;{{ .Title }}&#34;&gt; 要点：
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-10-11 00:00:00 +0000 UTC'>October 11, 2026</span>&nbsp;·&nbsp;<span>2 min</span></footer>
+  <a class="entry-link" aria-label="post link to Hugo 静态博客的性能优化实践：从 3s 到 0.8s 的加载提速之路" href="http://localhost:1313/my-ai-blog/posts/2026-10-11-hugo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/"></a>
+</article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/my-ai-blog/">My New Hugo Project</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/my-ai-blog/">未麻的部屋</a></span> · 
 
     
     

@@ -2,14 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/my-ai-blog/</loc>
-    <lastmod>2026-10-11T19:06:01+08:00</lastmod>
+    <loc>http://localhost:1313/my-ai-blog/tags/cdn/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/my-ai-blog/new/</loc>
-    <lastmod>2026-10-11T19:06:01+08:00</lastmod>
+    <loc>http://localhost:1313/my-ai-blog/tags/hugo/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/my-ai-blog/categories/</loc>
+    <loc>http://localhost:1313/my-ai-blog/posts/2026-10-11-hugo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/posts/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-ai-blog/tags/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/tags/webp/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/tags/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/categories/</loc>
   </url>
 </urlset>
