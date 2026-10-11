@@ -44,6 +44,17 @@ response = client.chat.completions.create(
 content = response.choices[0].message.content
 
 # 5. 保存为 Markdown 文件
+import re
+
+# 用日期 + 序号作为文件名，避免中文和空格
+date_str = datetime.now().strftime('%Y-%m-%d')
+filename = f"content/posts/{date_str}-ai-post.md"
+
+# 如果当天已有一篇，加序号
+counter = 1
+while os.path.exists(filename):
+    counter += 1
+    filename = f"content/posts/{date_str}-ai-post-{counter}.md"
 safe_title = "".join(c for c in topic['title'] if c.isalnum() or c in " -_").rstrip()
 filename = f"content/posts/{datetime.now().strftime('%Y-%m-%d')}-{safe_title}.md"
 
