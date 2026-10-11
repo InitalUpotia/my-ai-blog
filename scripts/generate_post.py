@@ -10,35 +10,65 @@ client = OpenAI(
     base_url="https://api.deepseek.com"
 )
 
-# 2. 读取选题池
-with open("topics.json", "r", encoding="utf-8") as f:
-    topics = json.load(f)
+# # 2. 读取选题池
+# with open("topics.json", "r", encoding="utf-8") as f:
+#     topics = json.load(f)
 
-# 随机选一个选题
-topic = random.choice(topics)
+# # 随机选一个选题
+# topic = random.choice(topics)
+
+# 日记的“素材池”
+fragments = [
+    "今天去了图书馆。",
+    "今天没出门。",
+    "今天下雨了。",
+    "今天学了下电脑的使用呢。",
+    "今天看了会儿书。",
+    "今天收到一条消息。",
+    "今天有一场live呢。",
+    "今天翻到以前的照片。",
+    "今天什么也没做。",
+]
+
+is_off = random.randint (0,1);
+if is_off:
+    abnormal = "在文章中穿插一些“不对劲”的细节，但不解释，不渲染，点到为止，少量即可。（风格参考旧核、怪核等）"
+else:
+    abnormal = "这是一篇完全正常的日记，不用加入任何异常细节"
 
 # 3. 构建提示词
-prompt = f"""请以专业的技术博客作者身份，写一篇关于“{topic['title']}”的文章。
-文章简介：{topic['description']}
+prompt = f"""请以日本偶像歌手未麻（人物源自电影《未麻的部屋》）的身份，以第一人称，写一篇日记。
+
 
 要求：
 - 使用 Markdown 格式。
 - 包含 YAML Front Matter，字段包括：title, date, draft (设为 false), tags, description。
 - date 使用当前日期 {datetime.now().strftime('%Y-%m-%d')}。
-- 文章结构清晰，包含引言、正文（分小节）、代码示例、总结。
-- 字数在 800-1500 字之间。
-- 语言风格：专业、友好、适合个人博客读者。
+- 3 到 10 段，每段1-5句话。
+- 语气平静、简短、不展开，捎带一点可爱，稍微有一点意识流。
+- {abnormal}
+- 不要用“我感到恐惧”“我很害怕”一类的词。不安感来自于事实本身。
+- 标题语法正确，语句通顺，但又一丝丝怪异感。
+
+参考风格：
+今天去了图书馆。借了三本书。
+回来的时候发现其中一本我已经看过了，但我记得上次借的不是这本。
+算了，可能是记错了。
+晚上写了点代码。部署成功了。
+
+你可以从下面的片段里选几个作为素材：
+{random.sample(fragments, 3)}
 """
 
 # 4. 调用 DeepSeek API 生成文章
 response = client.chat.completions.create(
     model="deepseek-chat",
     messages=[
-        {"role": "system", "content": "你是一位专业的技术博客作者。"},
+        {"role": "system", "content": "你是一个写日记的人。你只记录事实，只记录感受，不解释。"},
         {"role": "user", "content": prompt}
     ],
-    temperature=0.7,
-    max_tokens=4000
+    temperature=0.8,
+    max_tokens=2000
 )
 
 content = response.choices[0].message.content
@@ -46,21 +76,26 @@ content = response.choices[0].message.content
 # 5. 保存为 Markdown 文件
 import re
 
-# 用日期 + 序号作为文件名，避免中文和空格
 date_str = datetime.now().strftime('%Y-%m-%d')
-filename = f"content/posts/{date_str}-ai-post.md"
-
-# 如果当天已有一篇，加序号
-counter = 1
-while os.path.exists(filename):
-    counter += 1
-    filename = f"content/posts/{date_str}-ai-post-{counter}.md"
-safe_title = "".join(c for c in topic['title'] if c.isalnum() or c in " -_").rstrip()
-filename = f"content/posts/{datetime.now().strftime('%Y-%m-%d')}-{safe_title}.md"
+filename = f"content/posts/{date_str}.md"
 
 os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-with open(filename, "w", encoding="utf-8") as f:
-    f.write(content)
+front_matter = f"""---
+title: "{date_str}"
+date: {datetime.now().isoformat()}
+draft: false
+categories: ["日记"]
+hideMeta: true
+ShowReadingTime: false
+ShowShareButtons: false
+ShowPostNavLinks: false
+comments: false
+---
 
-print(f"文章已生成：{filename}")
+"""
+
+with open(filename, "w", encoding="utf-8") as f:
+    f.write(front_matter + content)
+
+print(f"日记已生成：{filename}")

@@ -2,8 +2,8 @@ name: AI Auto Publish with DeepSeek
 
 on:
   schedule:
-    # 每天 UTC 时间 2:00 运行，即北京时间 10:00
-    - cron: '0 2 * * *'
+    # 每天 UTC 时间 12:00 运行，即北京时间 20:00
+    - cron: '0 12 * * *'
   workflow_dispatch: # 允许手动触发
 
 permissions:
