@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Hugo 静态博客的性能优化实践",
+    "description": "介绍如何通过图片处理、代码分割、CDN 缓存等手段，提升 Hugo 博客的加载速度。"
+  },
+  {
+    "title": "使用 GitHub Actions 自动化部署的常见问题与解决方案",
+    "description": "总结在配置 GitHub Actions 自动部署 Hugo 博客时遇到的典型错误和排查思路。"
+  }
+]
