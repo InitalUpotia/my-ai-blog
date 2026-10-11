@@ -2,13 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/my-ai-blog/about/</loc>
-    <lastmod>2026-10-11T21:26:11+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/my-ai-blog/</loc>
-    <lastmod>2026-10-11T21:26:11+08:00</lastmod>
+    <loc>http://localhost:1313/my-ai-blog/posts/2026-10-11/</loc>
+    <lastmod>2026-10-11T13:41:23+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-ai-blog/categories/</loc>
+    <lastmod>2026-10-11T13:41:23+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/posts/</loc>
+    <lastmod>2026-10-11T13:41:23+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/categories/%E6%97%A5%E8%AE%B0/</loc>
+    <lastmod>2026-10-11T13:41:23+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/</loc>
+    <lastmod>2026-10-11T13:41:23+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-ai-blog/about/</loc>
+    <lastmod>2026-10-11T21:26:11+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/my-ai-blog/tags/</loc>
   </url><url>

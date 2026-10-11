@@ -6,7 +6,7 @@ theme: "PaperMod"
 params:
   homeInfoParams:
     Title: "未麻的部屋"
-    Content: "我是雾越未麻。这个博客每天更新。\n
+    Content: "我是雾越未麻。这个博客每天更新。
 *内容由我提供，由另一个我整理。哪个是我，我也在确认。*"
   ShowReadingTime: true
   ShowShareButtons: true
