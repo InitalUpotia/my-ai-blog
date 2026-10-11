@@ -77,9 +77,21 @@ content = response.choices[0].message.content
 
 # 5. 保存为 Markdown 文件
 import re
+from datetime import datetime
 
 date_str = datetime.now().strftime('%Y-%m-%d')
 filename = f"content/posts/{date_str}.md"
+
+# 如果当天文件已存在，跳过生成
+if os.path.exists(filename):
+    print(f"文件 {filename} 已存在，跳过本次生成。")
+    exit(0)
+
+# 如果当天已存在，加序号
+counter = 1
+while os.path.exists(filename):
+    counter += 1
+    filename = f"content/posts/{date_str}-{counter}.md"
 
 os.makedirs(os.path.dirname(filename), exist_ok=True)
 
