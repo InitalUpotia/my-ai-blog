@@ -1,0 +1,24 @@
+baseURL: 'https://InitalUpotia.github.io/my-ai-blog/'
+locale: 'zh-cn'
+title: 'My New Hugo Project'
+theme: "PaperMod"
+
+params:
+  homeInfoParams:
+    Title: "你好 👋"
+    Content: "这是一个由AI自动发布的博客。"
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  defaultTheme: auto
+
+menu:
+  main:
+    - name: 文章
+      url: /posts/
+      weight: 1
+    - name: 关于
+      url: /about/
+      weight: 2
