@@ -47,6 +47,8 @@ content = response.choices[0].message.content
 safe_title = "".join(c for c in topic['title'] if c.isalnum() or c in " -_").rstrip()
 filename = f"content/posts/{datetime.now().strftime('%Y-%m-%d')}-{safe_title}.md"
 
+os.makedirs(os.path.dirname(filename), exist_ok=True)
+
 with open(filename, "w", encoding="utf-8") as f:
     f.write(content)
 
