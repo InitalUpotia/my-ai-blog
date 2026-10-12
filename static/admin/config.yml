@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: InitalUpotia/my-ai-blog
+  branch: main
+  # 不配置 base_url，即使用 PAT 直接登录
+  auth_methods: [token]
+
+# 媒体文件存储位置
+media_folder: "static/images/uploads"
+public_folder: "/my-ai-blog/images/uploads"
+
+# 内容集合
+collections:
+  - name: "posts"
+    label: "博客文章"
+    label_singular: "文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: "title", label: "标题", widget: "string" }
+      - { name: "date", label: "日期", widget: "datetime" }
+      - { name: "draft", label: "草稿", widget: "boolean", default: false }
+      - { name: "description", label: "描述", widget: "text", required: false }
+      - { name: "tags", label: "标签", widget: "list", required: false, default: [] }
+      - { name: "categories", label: "分类", widget: "list", required: false, default: [] }
+      - { name: "body", label: "正文", widget: "markdown" }
+
+  - name: "about"
+    label: "关于页面"
+    files:
+      - name: "about"
+        label: "关于"
+        file: "content/about.md"
+        fields:
+          - { name: "title", label: "标题", widget: "string" }
+          - { name: "layout", label: "布局", widget: "string", default: "single" }
+          - { name: "body", label: "正文", widget: "markdown" }
